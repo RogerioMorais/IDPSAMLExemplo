@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  idp:
+    image: kenchan0130/simplesamlphp
+    container_name: idp
+    ports:
+      - "8081:8080"
+    networks:
+      - idp_network
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    volumes:
+    - ./idp/metadata/saml20-sp-remote.php:/var/www/simplesamlphp/metadata/saml20-sp-remote.php
+    - ./idp/config/authsources.php:/var/www/simplesamlphp/config/authsources.php
+
+    environment:
+      SIMPLESAMLPHP_SP_ENTITY_ID: https://host.docker.internal:5443/public/api/metadata
+      SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: https://host.docker.internal:5433/public/api/acs
+      SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE: https://host.docker.internal:5433/public/api/sls
+
+networks:
+  idp_network:
+    driver: bridge

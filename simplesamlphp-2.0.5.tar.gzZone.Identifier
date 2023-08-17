@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://simplesamlphp.org/
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/17167136/ab724b55-f726-4719-ab93-4d28fa45475b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230815%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230815T094221Z&X-Amz-Expires=300&X-Amz-Signature=a471d8968fb797b216277e189020e2f216e2988c6b29363b35b0cb2d36e9cc11&X-Amz-SignedHeaders=host&actor_id=30023919&key_id=0&repo_id=17167136&response-content-disposition=attachment%3B%20filename%3Dsimplesamlphp-2.0.5.tar.gz&response-content-type=application%2Foctet-stream
